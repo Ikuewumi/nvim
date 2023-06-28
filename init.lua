@@ -13,3 +13,4 @@ require("indent")
 require("linter")
 require("tr") -- Trouble
 require("td") -- TODO highlights
+require("formatter")
