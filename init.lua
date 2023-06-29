@@ -1,3 +1,4 @@
+require("vim-settings")
 require("plugins")
 require("tree")
 require("mason-config")
