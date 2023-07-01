@@ -99,6 +99,7 @@ require("lazy").setup({
 
     -- One Dark
     { "lukas-reineke/onedark.nvim" },
+    { "phha/zenburn.nvim" },
 
     -- Trouble Tab
     { "folke/trouble.nvim",                 dependencies = { "nvim-tree/nvim-web-devicons" }, opts = {} },
