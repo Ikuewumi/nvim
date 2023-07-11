@@ -10,3 +10,5 @@ map('n', '<leader>t', [[:Telescope<CR>]], {})
 --close with q
 map('n', 'q', [[:q<CR>]], {})
 map('n', '<C-q>', [[:qa<CR>]], {})
+map('n', '<C-d>', [[:Dashboard<CR>]], {})
+map('n', 'c', [[:CommentToggle<CR>]], {})

@@ -83,6 +83,8 @@ require("lazy").setup({
     },
 
 
+
+
     -- Indent Backlines
     { "lukas-reineke/indent-blankline.nvim" },
 
@@ -101,12 +103,12 @@ require("lazy").setup({
         'glepnir/dashboard-nvim',
         event = 'VimEnter',
         config = function()
-            require('dashboard').setup {
-                -- config
-            }
+            require('dashboard').setup {}
         end,
         dependencies = { { 'nvim-tree/nvim-web-devicons' } }
     },
+
+
 
 
     -- Trouble Tab
@@ -121,6 +123,16 @@ require("lazy").setup({
 
     -- Special Commments Highlighting
     { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {}, },
+
+    -- COmment Toggler
+    {
+        "terrortylor/nvim-comment",
+        config = function()
+            require('nvim_comment').setup {}
+        end,
+    },
+
+
 
     -- Code Completion
     -- Language Support
