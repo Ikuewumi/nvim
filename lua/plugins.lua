@@ -52,17 +52,6 @@ require("lazy").setup({
         end,
     },
 
-    -- Code Completion Tools
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-path",
-    "hrsh7th/cmp-cmdline",
-    "hrsh7th/nvim-cmp",
-    "hrsh7th/cmp-nvim-lua",
-    "hrsh7th/cmp-nvim-lsp-signature-help",
-    "hrsh7th/cmp-vsnip",
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/vim-vsnip",
 
     -- Theming and UI
     "Mofiqul/dracula.nvim",
@@ -98,16 +87,65 @@ require("lazy").setup({
     { "lukas-reineke/indent-blankline.nvim" },
 
     -- One Dark
-    { "lukas-reineke/onedark.nvim" },
+    { "folke/tokyonight.nvim" },
     { "phha/zenburn.nvim" },
 
+    -- Hop (Better Navigation)
+    {
+        "phaazon/hop.nvim",
+        lazy = true,
+    },
+
+    -- Dashboard
+    {
+        'glepnir/dashboard-nvim',
+        event = 'VimEnter',
+        config = function()
+            require('dashboard').setup {
+                -- config
+            }
+        end,
+        dependencies = { { 'nvim-tree/nvim-web-devicons' } }
+    },
+
+
     -- Trouble Tab
-    { "folke/trouble.nvim",                 dependencies = { "nvim-tree/nvim-web-devicons" }, opts = {} },
+    {
+        "folke/trouble.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        opts = {}
+    },
 
     -- Linting
     "mfussenegger/nvim-lint",
 
     -- Special Commments Highlighting
-    { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {}, }
+    { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {}, },
+
+    -- Code Completion
+    -- Language Support
+    -- Added this plugin.
+    {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v1.x',
+        dependencies = {
+            -- LSP Support
+            { 'neovim/nvim-lspconfig' },             -- Required
+            { 'williamboman/mason.nvim' },           -- Optional
+            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+
+            -- Autocompletion
+            { 'hrsh7th/nvim-cmp' },         -- Required
+            { 'hrsh7th/cmp-nvim-lsp' },     -- Required
+            { 'hrsh7th/cmp-buffer' },       -- Optional
+            { 'hrsh7th/cmp-path' },         -- Optional
+            { 'saadparwaiz1/cmp_luasnip' }, -- Optional
+            { 'hrsh7th/cmp-nvim-lua' },     -- Optional
+
+            -- Snippets
+            { 'L3MON4D3/LuaSnip' },             -- Required
+            { 'rafamadriz/friendly-snippets' }, -- Optional
+        }
+    },
 
 })
