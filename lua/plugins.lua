@@ -160,4 +160,24 @@ require("lazy").setup({
         }
     },
 
+
+    -- Command Pallette
+    {
+        'koenverburg/cmd-palette.nvim',
+        dependencies = {
+            'stevearc/dressing.nvim'
+        }
+    },
+
+
+    -- Colorizer
+    {
+        "NvChad/nvim-colorizer.lua",
+        config = function()
+            require("colorizer").setup {}
+        end
+    },
+
+
+
 })

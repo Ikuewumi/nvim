@@ -17,3 +17,4 @@ require("td") -- TODO highlights
 require("formatter")
 require("hopp")
 require("key")
+require("palette")
