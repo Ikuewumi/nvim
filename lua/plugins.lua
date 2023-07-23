@@ -180,4 +180,25 @@ require("lazy").setup({
 
 
 
+    -- A simple statusline/winbar component that uses LSP to show your current code context
+    {
+        "utilyre/barbecue.nvim",
+        name = "barbecue",
+        version = "*",
+        dependencies = {
+            "SmiteshP/nvim-navic",
+            "nvim-tree/nvim-web-devicons", -- optional dependency
+        },
+        opts = {
+            -- configurations go here
+        },
+    },
+
+    {
+        "nanozuki/tabby.nvim",
+    },
+
+
+
+
 })

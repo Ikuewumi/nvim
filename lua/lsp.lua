@@ -1,6 +1,11 @@
 -- Setup language servers.
 local lspconfig = require('lspconfig')
 
+--setup "barbecue" for breadcrumbs
+-- require("barbecue.ui").toggle(true)
+
+
+
 lspconfig.pyright.setup {}
 lspconfig.tsserver.setup {}
 lspconfig.html.setup {}

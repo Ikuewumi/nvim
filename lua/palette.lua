@@ -1,5 +1,12 @@
 require('cmd-palette').setup({
     {
+        label = "Find Files",
+        callback = function()
+            require("telescope.builtin").find_files()
+        end
+    },
+
+    {
         label = "Live Grep",
         callback = function()
             require("telescope.builtin").live_grep()
@@ -7,11 +14,13 @@ require('cmd-palette').setup({
     },
 
     {
-        label = "Find Files",
+        label = "Toggle Float Terminal",
         callback = function()
-            require("telescope.builtin").find_files()
+            require("nvterm.terminal").toggle('float')
         end
     },
+
+
 
     {
         label = "Explorer",
